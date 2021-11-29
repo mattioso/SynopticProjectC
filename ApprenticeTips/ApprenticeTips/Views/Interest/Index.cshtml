@@ -2,3 +2,53 @@
 @{
     ViewData["Title"] = "Home Page";
 }
+
+<div id="data-entry">
+    <h5>Please enter your details and we'll be in touch</h5>
+
+    <div class="row">
+        <div class="col-4">
+            @Html.LabelFor(model => model.FirstName)
+        </div>
+        <div class="col-6">
+            @Html.EditorFor(model => model.FirstName)
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-4">
+            @Html.LabelFor(model => model.Surname)
+        </div>
+        <div class="col-6">
+            @Html.EditorFor(model => model.Surname)
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-4">
+            @Html.LabelFor(model => model.Email)
+        </div>
+        <div class="col-6">
+            @Html.EditorFor(model => model.Email)
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-4">
+            @Html.LabelFor(model => model.PhoneNumber)
+        </div>
+        <div class="col-6">
+            @Html.EditorFor(model => model.PhoneNumber)
+        </div>
+    </div>
+
+    <div>
+        @Html.LabelFor(model => model.PreviousQualifications)
+        @Html.EditorFor(model => model.PreviousQualifications)
+    </div>
+
+    <div>
+        @Html.LabelFor(model => model.ApprentishipInterests)
+        @Html.EditorFor(model => model.ApprentishipInterests)
+    </div>
+</div>
