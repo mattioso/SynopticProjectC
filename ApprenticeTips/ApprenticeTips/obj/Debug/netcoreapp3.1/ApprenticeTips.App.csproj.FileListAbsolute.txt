@@ -36,3 +36,4 @@ D:\_College\_Project\Code\SynopticProjectC\ApprenticeTips\ApprenticeTips\obj\Deb
 D:\_College\_Project\Code\SynopticProjectC\ApprenticeTips\ApprenticeTips\obj\Debug\netcoreapp3.1\ApprenticeTips.App.pdb
 D:\_College\_Project\Code\SynopticProjectC\ApprenticeTips\ApprenticeTips\obj\Debug\netcoreapp3.1\ApprenticeTips.App.genruntimeconfig.cache
 D:\_College\_Project\Code\SynopticProjectC\ApprenticeTips\ApprenticeTips\obj\Debug\netcoreapp3.1\ApprenticeTips.App.csproj.CopyComplete
+D:\_College\_Project\Code\SynopticProjectC\ApprenticeTips\ApprenticeTips\obj\Debug\netcoreapp3.1\Razor\Views\Internal\Index.cshtml.g.cs
