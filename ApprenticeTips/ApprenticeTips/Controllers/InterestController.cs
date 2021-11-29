@@ -21,7 +21,7 @@ namespace ApprenticeTips.App.Controllers
                     new PreviousQualLevelViewModel{ Level = 4, Name = "Level 4" },
                     new PreviousQualLevelViewModel{ Level = 5, Name = "Level 5" },
                     new PreviousQualLevelViewModel{ Level = 6, Name = "Level 6" },
-                    new PreviousQualLevelViewModel{ Level = 0, Name = "Level 7" }
+                    new PreviousQualLevelViewModel{ Level = 7, Name = "Level 7" }
                 }
             };
 

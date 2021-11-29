@@ -33,7 +33,7 @@ namespace ApprenticeTips.App.Models.Interest
         [Display(Name = "Please select the routes that interest you:")]
         public List<ApprentishipCatagoryViewModel> ApprentishipCatagories { get; set; }
 
-        public int PreviousQualificationsLevel { get; set; }
+        public int? PreviousQualificationsLevel { get; set; }
         public List<int> ApprentishipCatagoriesId { get; set; }
     }
 }

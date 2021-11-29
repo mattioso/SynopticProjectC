@@ -43,8 +43,12 @@
     </div>
 
     <div>
-        @Html.LabelFor(model => model.PreviousQualifications)
-        @Html.EditorFor(model => model.PreviousQualifications)
+        @Html.LabelFor(model => model.PreviousQualificationLevels)
+        @Html.DropDownListFor(model => model.PreviousQualificationsLevel,
+                              new SelectList(Model.PreviousQualificationLevels, 
+                              "Level", 
+                              "Name", 
+                              0))
     </div>
 
     <div>
