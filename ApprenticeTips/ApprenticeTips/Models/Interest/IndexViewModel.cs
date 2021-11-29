@@ -21,9 +21,12 @@ namespace ApprenticeTips.App.Models.Interest
         public string PhoneNumber { get; set; }
 
         [Display(Name = "Level of Previous qualification:")]
-        public List<int> PreviousQualifications { get; set; }
+        public List<PreviousQualLevelViewModel> PreviousQualificationLevels { get; set; }
 
         [Display(Name = "Please select the routes that interest you:")]
-        public List<string> ApprentishipInterests { get; set; }
+        public List<ApprentishipCatagoryViewModel> ApprentishipCatagories { get; set; }
+
+        public int PreviousQualificationsLevel { get; set; }
+        public List<int> ApprentishipCatagoriesId { get; set; }
     }
 }
