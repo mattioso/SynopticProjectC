@@ -45,26 +45,35 @@
     <div>
         @Html.LabelFor(model => model.PreviousQualificationLevels)
         @Html.DropDownListFor(model => model.PreviousQualificationsLevel,
-                              new SelectList(Model.PreviousQualificationLevels, 
-                              "Level", 
-                              "Name", 
+                              new SelectList(Model.PreviousQualificationLevels,
+                              "Level",
+                              "Name",
                               0))
     </div>
 
     <div>
         @Html.LabelFor(model => model.ApprentishipCatagories)
         <div id="apprentship-catagories">
-            @foreach(var catagory in Model.ApprentishipCatagories)
+            @foreach (var catagory in Model.ApprentishipCatagories)
             {
                 <div class="row">
                     <div class="col-4">
                         <p>@catagory.Name</p>
                     </div>
                     <div>
-                        <input type="checkbox" id=@string.Format("catagory-id-{0}", catagory.Id)>
+                        <input type="checkbox"
+                               id=@string.Format("catagory-id-{0}", catagory.Id)
+                               placeholder="Please provide any other information that you wish to let our recruiters know…">
                     </div>
                 </div>
             }
         </div>
     </div>
+
+    <div>
+        @Html.TextAreaFor(x => x.Comments,
+                          new { cols=100, rows=5})
+    </div>
+
+    <button type="button" class="btn btn-secondary">Submit</button>
 </div>
