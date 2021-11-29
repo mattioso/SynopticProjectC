@@ -53,6 +53,18 @@
 
     <div>
         @Html.LabelFor(model => model.ApprentishipCatagories)
-        @Html.EditorFor(model => model.ApprentishipCatagories)
+        <div id="apprentship-catagories">
+            @foreach(var catagory in Model.ApprentishipCatagories)
+            {
+                <div class="row">
+                    <div class="col-4">
+                        <p>@catagory.Name</p>
+                    </div>
+                    <div>
+                        <input type="checkbox" id=@string.Format("catagory-id-{0}", catagory.Id)>
+                    </div>
+                </div>
+            }
+        </div>
     </div>
 </div>
