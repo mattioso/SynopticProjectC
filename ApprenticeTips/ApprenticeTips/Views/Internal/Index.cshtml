@@ -1,0 +1,61 @@
+﻿@model ApprenticeTips.App.Models.Internal.InternalSearchViewModel
+@{
+    ViewData["Title"] = "Internal Search";
+}
+
+<h4>Please fill in the fields bellow to search for apprentiships</h4>
+
+<div>
+    <div class="row">
+        <div class="col-3">
+            @Html.LabelFor(model => model.Routes)
+        </div>
+        <div class="col-6">
+            @Html.DropDownListFor(model => model.RouteId,
+                              new SelectList(Model.Routes,
+                              "Id",
+                              "Name",
+                              0))
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3">
+            @Html.LabelFor(model => model.Status)
+        </div>
+        <div class="col-6">
+            @Html.DropDownListFor(model => model.StatusId,
+                              new SelectList(Model.Status,
+                              "Id",
+                              "Name",
+                              0))
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3">
+            @Html.LabelFor(model => model.Levels)
+        </div>
+        <div class="col-6">
+            @Html.DropDownListFor(model => model.LevelId,
+                              new SelectList(Model.Levels,
+                              "Id",
+                              "Name",
+                              0))
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3">
+            @Html.LabelFor(model => model.Durations)
+        </div>
+        <div class="col-6">
+            @Html.DropDownListFor(model => model.DurationId,
+                              new SelectList(Model.Durations,
+                              "Id",
+                              "Name",
+                              0))
+        </div>
+    </div>
+
+    <button type="button" class="btn btn-secondary">Search</button> 
+
+    <h4>Results</h4>
+</div>
