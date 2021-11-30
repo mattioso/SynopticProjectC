@@ -13,6 +13,8 @@ namespace ApprenticeTips.App.Controllers
     {
         public IActionResult Index()
         {
+            var repo = new InternalDataRepo(DbContext);
+
             var vm = new IndexViewModel
             {
                 PreviousQualificationLevels = new List<PreviousQualLevelViewModel> {
@@ -39,8 +41,6 @@ namespace ApprenticeTips.App.Controllers
                     new ApprentishipCatagoryViewModel{ Id = 10, Name = "Test 10", Selected = false }
                 },
             };
-
-            var repo = new InternalDataRepo(DbContext);
 
             return View(vm);
         }
