@@ -25,7 +25,6 @@ namespace ApprenticeTips.App.Models.Interest
 
         [Required(ErrorMessage = "Contact Number is required")]
         [Display(Name = "Contact Number:")]
-        [Phone]
         [StringLength(20)]
         public string PhoneNumber { get; set; }
 

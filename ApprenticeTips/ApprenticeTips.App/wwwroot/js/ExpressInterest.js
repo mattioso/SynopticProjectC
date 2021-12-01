@@ -1,4 +1,6 @@
 ﻿
+const regex = new RegExp('^[0-9 ]+$')
+
 function OnSubmitPressed() {
     data = {
         "FirstName": document.getElementById("FirstName").value,
@@ -25,6 +27,7 @@ function OnSubmitPressed() {
     }
 
     var dataValid = true;
+    $("#error-alert").empty()
 
     if (data.FirstName == "") {
         dataValid = false;
@@ -45,12 +48,11 @@ function OnSubmitPressed() {
         dataValid = false;
         $("#error-alert").append("<p>Please enter a Phone Number</p>")
     }
-    else if (data.PhoneNumber.isNaN()) {
+    else if (!regex.test(data.PhoneNumber)) {
         dataValid = false;
         $("#error-alert").append("<p>Please enter a valid Phone Number</p>")
     }
-
-
+    
     if (dataValid) {
         $.post("Interest/GetInterestData",
             data,

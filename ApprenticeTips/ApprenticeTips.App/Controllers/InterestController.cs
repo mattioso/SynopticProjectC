@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using ApprenticeTips.App.Models.Interest;
 using Microsoft.AspNetCore.Mvc;
 using ApprenticeTips.Data;
+using ApprenticeTips.Data.Models;
 using ApprenticeTips.Data.DataAccess;
 
 namespace ApprenticeTips.App.Controllers
@@ -32,8 +33,38 @@ namespace ApprenticeTips.App.Controllers
         }
 
         [HttpPost]
-        public bool GetInterestData(IndexViewModel viewModel)
+        public bool GetInterestData(IndexViewModel vm)
         {
+            var repo = new InterestDataRepo(DbContext);
+
+            var dataModel = new Contact
+            {
+                FirstName = vm.FirstName,
+                Surname = vm.Surname,
+                Email = vm.Email,
+                Phone = vm.PhoneNumber,
+                PreviousLevel = (int) vm.PreviousQualificationsLevel,
+                Agriculture = Convert.ToInt32(vm.Agriculture),
+                Business = Convert.ToInt32(vm.Business),
+                Care = Convert.ToInt32(vm.Care),
+                Catering = Convert.ToInt32(vm.Catering),
+                Construction = Convert.ToInt32(vm.Construction),
+                Creative = Convert.ToInt32(vm.Creative),
+                Digital = Convert.ToInt32(vm.Digital),
+                Education = Convert.ToInt32(vm.Education),
+                Engineering = Convert.ToInt32(vm.Engineering),
+                Hair = Convert.ToInt32(vm.Hair),
+                Health = Convert.ToInt32(vm.Health),
+                Legal = Convert.ToInt32(vm.Legal),
+                Protective = Convert.ToInt32(vm.Protective),
+                Sales = Convert.ToInt32(vm.Sales),
+                Transport = Convert.ToInt32(vm.Transport),
+                Comments = vm.Comments,
+                Timestamp = DateTime.Now
+            };
+
+
+
             return true;
         }
     }

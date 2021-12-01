@@ -38,7 +38,7 @@
             @Html.LabelFor(model => model.PhoneNumber)
         </div>
         <div class="col-6">
-            @Html.EditorFor(model => model.PhoneNumber)
+            @Html.EditorFor(model => model.PhoneNumber, new { @type = "number" })
         </div>
     </div>
 
@@ -195,7 +195,7 @@
 
     <div>
         @Html.TextAreaFor(x => x.Comments,
-                          new { cols = 100, rows = 5 })
+                          new { cols = 75, rows = 5 })
     </div>
 
     <div class="alert alert-danger" role="alert" id="error-alert" style="display:none"></div>
