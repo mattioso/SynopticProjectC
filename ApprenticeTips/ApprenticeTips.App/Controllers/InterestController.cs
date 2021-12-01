@@ -13,8 +13,6 @@ namespace ApprenticeTips.App.Controllers
     {
         public IActionResult Index()
         {
-            var repo = new InternalDataRepo(DbContext);
-
             var vm = new IndexViewModel
             {
                 PreviousQualificationLevels = new List<PreviousQualLevelViewModel> {
@@ -31,6 +29,12 @@ namespace ApprenticeTips.App.Controllers
             };
 
             return View(vm);
+        }
+
+        [HttpPost]
+        public bool GetInterestData(IndexViewModel viewModel)
+        {
+            return true;
         }
     }
 }
