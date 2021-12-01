@@ -28,18 +28,6 @@ namespace ApprenticeTips.App.Controllers
                     new PreviousQualLevelViewModel{ Level = 7, Name = "Level 7" }
                 },
 
-                ApprentishipCatagories = new List<ApprentishipCatagoryViewModel> { 
-                    new ApprentishipCatagoryViewModel{ Id = 1, Name = "Test 1", Selected = false },
-                    new ApprentishipCatagoryViewModel{ Id = 2, Name = "Test 2", Selected = false },
-                    new ApprentishipCatagoryViewModel{ Id = 3, Name = "Test 3", Selected = false },
-                    new ApprentishipCatagoryViewModel{ Id = 4, Name = "Test 4", Selected = false },
-                    new ApprentishipCatagoryViewModel{ Id = 5, Name = "Test 5", Selected = false },
-                    new ApprentishipCatagoryViewModel{ Id = 6, Name = "Test 6", Selected = false },
-                    new ApprentishipCatagoryViewModel{ Id = 7, Name = "Test 7", Selected = false },
-                    new ApprentishipCatagoryViewModel{ Id = 8, Name = "Test 8", Selected = false },
-                    new ApprentishipCatagoryViewModel{ Id = 9, Name = "Test 9", Selected = false },
-                    new ApprentishipCatagoryViewModel{ Id = 10, Name = "Test 10", Selected = false }
-                },
             };
 
             return View(vm);

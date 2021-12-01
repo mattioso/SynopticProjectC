@@ -14,6 +14,7 @@ namespace ApprenticeTips.Data.Models
         public int PreviousLevel { get; set; }
         public int Agriculture { get; set; }
         public int Business { get; set; }
+        public int Care { get; set; }
         public int Catering { get; set; }
         public int Construction { get; set; }
         public int Creative { get; set; }

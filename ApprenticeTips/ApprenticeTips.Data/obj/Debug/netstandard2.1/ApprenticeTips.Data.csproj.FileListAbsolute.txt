@@ -7,3 +7,12 @@ D:\_College\_Project\Code\SynopticProjectC\ApprenticeTips\ApprenticeTips.Data\bi
 D:\_College\_Project\Code\SynopticProjectC\ApprenticeTips\ApprenticeTips.Data\obj\Debug\netstandard2.1\ApprenticeTips.Data.dll
 D:\_College\_Project\Code\SynopticProjectC\ApprenticeTips\ApprenticeTips.Data\obj\Debug\netstandard2.1\ApprenticeTips.Data.pdb
 D:\_College\_Project\Code\SynopticProjectC\ApprenticeTips\ApprenticeTips.Data\obj\Debug\netstandard2.1\ApprenticeTips.Data.csproj.CoreCompileInputs.cache
+D:\_College\_Project\Code\SynopticProjectC\SynopticProjectC\ApprenticeTips\ApprenticeTips.Data\bin\Debug\netstandard2.1\ApprenticeTips.Data.deps.json
+D:\_College\_Project\Code\SynopticProjectC\SynopticProjectC\ApprenticeTips\ApprenticeTips.Data\bin\Debug\netstandard2.1\ApprenticeTips.Data.dll
+D:\_College\_Project\Code\SynopticProjectC\SynopticProjectC\ApprenticeTips\ApprenticeTips.Data\bin\Debug\netstandard2.1\ApprenticeTips.Data.pdb
+D:\_College\_Project\Code\SynopticProjectC\SynopticProjectC\ApprenticeTips\ApprenticeTips.Data\obj\Debug\netstandard2.1\ApprenticeTips.Data.csprojAssemblyReference.cache
+D:\_College\_Project\Code\SynopticProjectC\SynopticProjectC\ApprenticeTips\ApprenticeTips.Data\obj\Debug\netstandard2.1\ApprenticeTips.Data.AssemblyInfoInputs.cache
+D:\_College\_Project\Code\SynopticProjectC\SynopticProjectC\ApprenticeTips\ApprenticeTips.Data\obj\Debug\netstandard2.1\ApprenticeTips.Data.AssemblyInfo.cs
+D:\_College\_Project\Code\SynopticProjectC\SynopticProjectC\ApprenticeTips\ApprenticeTips.Data\obj\Debug\netstandard2.1\ApprenticeTips.Data.csproj.CoreCompileInputs.cache
+D:\_College\_Project\Code\SynopticProjectC\SynopticProjectC\ApprenticeTips\ApprenticeTips.Data\obj\Debug\netstandard2.1\ApprenticeTips.Data.dll
+D:\_College\_Project\Code\SynopticProjectC\SynopticProjectC\ApprenticeTips\ApprenticeTips.Data\obj\Debug\netstandard2.1\ApprenticeTips.Data.pdb

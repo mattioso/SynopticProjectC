@@ -18,14 +18,12 @@ namespace ApprenticeTips.Data.DataAccess
         public void Test()
         {
             var connectionString = _db.Database.GetDbConnection()?.ConnectionString;
-            
-            /*using (var con = new MySqlConnection(connectionString))
-            {
-                using (var cmd = con.CreateCommand())
-                {
 
-                }
-            }*/
+            using var con = new MySqlConnection(connectionString);
+            using (var cmd = con.CreateCommand())
+            {
+                
+            }
         }
     }
 }
