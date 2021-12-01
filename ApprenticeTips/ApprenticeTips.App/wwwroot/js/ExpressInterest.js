@@ -2,10 +2,10 @@
 function OnSubmitPressed() {
     data = {
         "FirstName": document.getElementById("FirstName").value,
-        "SecondName": document.getElementById("Surname").value,
+        "Surname": document.getElementById("Surname").value,
         "Email": document.getElementById("Email").value,
-        "ContactNumber": document.getElementById("PhoneNumber").value,
-        "LevelOfPreviousQual": document.getElementById("PreviousQualificationsLevel").value,
+        "PhoneNumber": document.getElementById("PhoneNumber").value,
+        "PreviousQualificationsLevel": document.getElementById("PreviousQualificationsLevel").value,
         "Agriculture": document.getElementById("Agriculture").checked,
         "Business": document.getElementById("Business").checked,
         "Care": document.getElementById("Care").checked,
@@ -24,11 +24,42 @@ function OnSubmitPressed() {
         "Comments": document.getElementById("Comments").value
     }
 
-    console.log(data)
+    var dataValid = true;
 
-    $.post("Interest/GetInterestData",
-           data,
-           function (data, status) {
-               alert("Data: " + data + "\nStatus: " + status);
-           });
+    if (data.FirstName == "") {
+        dataValid = false;
+        $("#error-alert").append("<p>Please enter a First Name</p>")
+    }
+
+    if (data.Surname == "") {
+        dataValid = false;
+        $("#error-alert").append("<p>Please enter a Surname</p>")
+    }
+
+    if (data.Email == "") {
+        dataValid = false;
+        $("#error-alert").append("<p>Please enter an Email</p>")
+    }
+
+    if (data.PhoneNumber == "") {
+        dataValid = false;
+        $("#error-alert").append("<p>Please enter a Phone Number</p>")
+    }
+    else if (data.PhoneNumber.isNaN()) {
+        dataValid = false;
+        $("#error-alert").append("<p>Please enter a valid Phone Number</p>")
+    }
+
+
+    if (dataValid) {
+        $.post("Interest/GetInterestData",
+            data,
+            function (data, status) {
+                alert("Data: " + data + "\nStatus: " + status);
+            });
+    }
+    else {
+        $("#error-alert").show();
+    }
+
 }

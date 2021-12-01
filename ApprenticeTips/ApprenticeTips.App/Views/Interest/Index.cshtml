@@ -195,8 +195,10 @@
 
     <div>
         @Html.TextAreaFor(x => x.Comments,
-                          new { cols=100, rows=5})
+                          new { cols = 100, rows = 5 })
     </div>
+
+    <div class="alert alert-danger" role="alert" id="error-alert" style="display:none"></div>
 
     <button type="button" class="btn btn-secondary" onclick="OnSubmitPressed()">Submit</button>
 </div>

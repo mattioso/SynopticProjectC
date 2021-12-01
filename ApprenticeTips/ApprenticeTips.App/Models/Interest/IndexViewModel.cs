@@ -8,19 +8,24 @@ namespace ApprenticeTips.App.Models.Interest
 {
     public class IndexViewModel
     {
+        [Required(ErrorMessage = "First Name is required")]
         [Display(Name = "Firstname:")]
         [StringLength(30)]
         public string FirstName { get; set; }
 
+        [Required(ErrorMessage = "Surname is required")]
         [Display(Name = "Surname:")]
         [StringLength(30)]
         public string Surname { get; set; }
 
+        [Required(ErrorMessage = "Email address is required")]
         [Display(Name = "Email:")]
         [StringLength(50)]
         public string Email { get; set; }
-        
+
+        [Required(ErrorMessage = "Contact Number is required")]
         [Display(Name = "Contact Number:")]
+        [Phone]
         [StringLength(20)]
         public string PhoneNumber { get; set; }
 
