@@ -60,10 +60,10 @@ namespace ApprenticeTips.App.Controllers
                 Sales = Convert.ToInt32(vm.Sales),
                 Transport = Convert.ToInt32(vm.Transport),
                 Comments = vm.Comments,
-                Timestamp = DateTime.Now
+                SubmitDate = DateTime.Now
             };
 
-
+            repo.RegisterInterest(dataModel);
 
             return true;
         }

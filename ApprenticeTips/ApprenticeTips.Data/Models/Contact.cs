@@ -28,7 +28,7 @@ namespace ApprenticeTips.Data.Models
         public int Sales { get; set; }
         public int Transport { get; set; }
         public string Comments { get; set; }
-        public DateTime Timestamp { get; set; }
+        public DateTime SubmitDate { get; set; }
         public string AsignedTo { get; set; }
 
     }
