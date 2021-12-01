@@ -38,7 +38,7 @@
             @Html.DropDownListFor(model => model.LevelId,
                               new SelectList(Model.Levels,
                               "Id",
-                              "Name",
+                              "Value",
                               0))
         </div>
     </div>
@@ -50,12 +50,25 @@
             @Html.DropDownListFor(model => model.DurationId,
                               new SelectList(Model.Durations,
                               "Id",
-                              "Name",
+                              "Value",
                               0))
         </div>
     </div>
 
-    <button type="button" class="btn btn-secondary">Search</button> 
+    <button type="button" class="btn btn-secondary" onclick="Search()">Search</button>
 
     <h4>Results</h4>
+
+    <div class="alert alert-danger" role="alert" id="error-alert" style="display:none"></div>
+
+    <div id="table-div">
+        <table id="search-table">
+            <thead></thead>
+            <thead></thead>
+        </table>
+    </div>
 </div>
+
+@section Scripts{
+    <script type="text/javascript" charset="utf8" src="~/js/InternalSearch.js"></script>
+}

@@ -7997,11 +7997,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\_College\\_Project\\Code\\SynopticProjectC\\ApprenticeTips\\ApprenticeTips.App\\ApprenticeTips.App.csproj",
+      "projectUniqueName": "D:\\_College\\_Project\\Code\\SynopticProjectC\\SynopticProjectC\\ApprenticeTips\\ApprenticeTips.App\\ApprenticeTips.App.csproj",
       "projectName": "ApprenticeTips.App",
-      "projectPath": "D:\\_College\\_Project\\Code\\SynopticProjectC\\ApprenticeTips\\ApprenticeTips.App\\ApprenticeTips.App.csproj",
+      "projectPath": "D:\\_College\\_Project\\Code\\SynopticProjectC\\SynopticProjectC\\ApprenticeTips\\ApprenticeTips.App\\ApprenticeTips.App.csproj",
       "packagesPath": "C:\\Users\\jls45\\.nuget\\packages\\",
-      "outputPath": "D:\\_College\\_Project\\Code\\SynopticProjectC\\ApprenticeTips\\ApprenticeTips.App\\obj\\",
+      "outputPath": "D:\\_College\\_Project\\Code\\SynopticProjectC\\SynopticProjectC\\ApprenticeTips\\ApprenticeTips.App\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\jls45\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -8017,8 +8017,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "D:\\_College\\_Project\\Code\\SynopticProjectC\\ApprenticeTips\\ApprenticeTips.Data\\ApprenticeTips.Data.csproj": {
-              "projectPath": "D:\\_College\\_Project\\Code\\SynopticProjectC\\ApprenticeTips\\ApprenticeTips.Data\\ApprenticeTips.Data.csproj"
+            "D:\\_College\\_Project\\Code\\SynopticProjectC\\SynopticProjectC\\ApprenticeTips\\ApprenticeTips.Data\\ApprenticeTips.Data.csproj": {
+              "projectPath": "D:\\_College\\_Project\\Code\\SynopticProjectC\\SynopticProjectC\\ApprenticeTips\\ApprenticeTips.Data\\ApprenticeTips.Data.csproj"
             }
           }
         }

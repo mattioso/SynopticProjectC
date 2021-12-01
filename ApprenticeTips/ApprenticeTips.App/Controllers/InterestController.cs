@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using ApprenticeTips.App.Models.Interest;
 using Microsoft.AspNetCore.Mvc;
 using ApprenticeTips.Data;
+using ApprenticeTips.Data.Models;
 using ApprenticeTips.Data.DataAccess;
 
 namespace ApprenticeTips.App.Controllers
@@ -13,8 +14,6 @@ namespace ApprenticeTips.App.Controllers
     {
         public IActionResult Index()
         {
-            var repo = new InternalDataRepo(DbContext);
-
             var vm = new IndexViewModel
             {
                 PreviousQualificationLevels = new List<PreviousQualLevelViewModel> {
@@ -28,21 +27,45 @@ namespace ApprenticeTips.App.Controllers
                     new PreviousQualLevelViewModel{ Level = 7, Name = "Level 7" }
                 },
 
-                ApprentishipCatagories = new List<ApprentishipCatagoryViewModel> { 
-                    new ApprentishipCatagoryViewModel{ Id = 1, Name = "Test 1", Selected = false },
-                    new ApprentishipCatagoryViewModel{ Id = 2, Name = "Test 2", Selected = false },
-                    new ApprentishipCatagoryViewModel{ Id = 3, Name = "Test 3", Selected = false },
-                    new ApprentishipCatagoryViewModel{ Id = 4, Name = "Test 4", Selected = false },
-                    new ApprentishipCatagoryViewModel{ Id = 5, Name = "Test 5", Selected = false },
-                    new ApprentishipCatagoryViewModel{ Id = 6, Name = "Test 6", Selected = false },
-                    new ApprentishipCatagoryViewModel{ Id = 7, Name = "Test 7", Selected = false },
-                    new ApprentishipCatagoryViewModel{ Id = 8, Name = "Test 8", Selected = false },
-                    new ApprentishipCatagoryViewModel{ Id = 9, Name = "Test 9", Selected = false },
-                    new ApprentishipCatagoryViewModel{ Id = 10, Name = "Test 10", Selected = false }
-                },
             };
 
             return View(vm);
+        }
+
+        [HttpPost]
+        public bool GetInterestData(IndexViewModel vm)
+        {
+            var repo = new InterestDataRepo(DbContext);
+
+            var dataModel = new ContactModel
+            {
+                FirstName = vm.FirstName,
+                Surname = vm.Surname,
+                Email = vm.Email,
+                Phone = vm.PhoneNumber,
+                PreviousLevel = (int) vm.PreviousQualificationsLevel,
+                Agriculture = Convert.ToInt32(vm.Agriculture),
+                Business = Convert.ToInt32(vm.Business),
+                Care = Convert.ToInt32(vm.Care),
+                Catering = Convert.ToInt32(vm.Catering),
+                Construction = Convert.ToInt32(vm.Construction),
+                Creative = Convert.ToInt32(vm.Creative),
+                Digital = Convert.ToInt32(vm.Digital),
+                Education = Convert.ToInt32(vm.Education),
+                Engineering = Convert.ToInt32(vm.Engineering),
+                Hair = Convert.ToInt32(vm.Hair),
+                Health = Convert.ToInt32(vm.Health),
+                Legal = Convert.ToInt32(vm.Legal),
+                Protective = Convert.ToInt32(vm.Protective),
+                Sales = Convert.ToInt32(vm.Sales),
+                Transport = Convert.ToInt32(vm.Transport),
+                Comments = vm.Comments,
+                SubmitDate = DateTime.Now
+            };
+
+            repo.RegisterInterest(dataModel);
+
+            return true;
         }
     }
 }

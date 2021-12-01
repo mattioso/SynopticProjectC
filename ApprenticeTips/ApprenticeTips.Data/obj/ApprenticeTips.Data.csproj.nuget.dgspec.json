@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\_College\\_Project\\Code\\SynopticProjectC\\ApprenticeTips\\ApprenticeTips.Data\\ApprenticeTips.Data.csproj": {}
+    "D:\\_College\\_Project\\Code\\SynopticProjectC\\SynopticProjectC\\ApprenticeTips\\ApprenticeTips.Data\\ApprenticeTips.Data.csproj": {}
   },
   "projects": {
-    "D:\\_College\\_Project\\Code\\SynopticProjectC\\ApprenticeTips\\ApprenticeTips.Data\\ApprenticeTips.Data.csproj": {
+    "D:\\_College\\_Project\\Code\\SynopticProjectC\\SynopticProjectC\\ApprenticeTips\\ApprenticeTips.Data\\ApprenticeTips.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\_College\\_Project\\Code\\SynopticProjectC\\ApprenticeTips\\ApprenticeTips.Data\\ApprenticeTips.Data.csproj",
+        "projectUniqueName": "D:\\_College\\_Project\\Code\\SynopticProjectC\\SynopticProjectC\\ApprenticeTips\\ApprenticeTips.Data\\ApprenticeTips.Data.csproj",
         "projectName": "ApprenticeTips.Data",
-        "projectPath": "D:\\_College\\_Project\\Code\\SynopticProjectC\\ApprenticeTips\\ApprenticeTips.Data\\ApprenticeTips.Data.csproj",
+        "projectPath": "D:\\_College\\_Project\\Code\\SynopticProjectC\\SynopticProjectC\\ApprenticeTips\\ApprenticeTips.Data\\ApprenticeTips.Data.csproj",
         "packagesPath": "C:\\Users\\jls45\\.nuget\\packages\\",
-        "outputPath": "D:\\_College\\_Project\\Code\\SynopticProjectC\\ApprenticeTips\\ApprenticeTips.Data\\obj\\",
+        "outputPath": "D:\\_College\\_Project\\Code\\SynopticProjectC\\SynopticProjectC\\ApprenticeTips\\ApprenticeTips.Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\jls45\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ApprenticeTips.Data.Models
 {
-    class Contact
+    public class ContactModel
     {
         public int Id { get; set; }
         public string FirstName { get; set; }
@@ -14,6 +14,7 @@ namespace ApprenticeTips.Data.Models
         public int PreviousLevel { get; set; }
         public int Agriculture { get; set; }
         public int Business { get; set; }
+        public int Care { get; set; }
         public int Catering { get; set; }
         public int Construction { get; set; }
         public int Creative { get; set; }
@@ -27,7 +28,7 @@ namespace ApprenticeTips.Data.Models
         public int Sales { get; set; }
         public int Transport { get; set; }
         public string Comments { get; set; }
-        public DateTime Timestamp { get; set; }
+        public DateTime SubmitDate { get; set; }
         public string AsignedTo { get; set; }
 
     }

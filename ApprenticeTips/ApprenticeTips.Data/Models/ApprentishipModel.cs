@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ApprenticeTips.Data.Models
 {
-    public class Apprentiships
+    public class ApprentishipModel
     {
         public int Id { get; set; }
         public string Route { get; set; }

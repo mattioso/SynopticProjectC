@@ -38,42 +38,171 @@
             @Html.LabelFor(model => model.PhoneNumber)
         </div>
         <div class="col-6">
-            @Html.EditorFor(model => model.PhoneNumber)
+            @Html.EditorFor(model => model.PhoneNumber, new { @type = "number" })
         </div>
     </div>
 
-    <div>
-        @Html.LabelFor(model => model.PreviousQualificationLevels)
-        @Html.DropDownListFor(model => model.PreviousQualificationsLevel,
+    <div class="row">
+        <div class="col-4">
+            @Html.LabelFor(model => model.PreviousQualificationLevels)
+        </div>
+        <div class="col-6">
+            @Html.DropDownListFor(model => model.PreviousQualificationsLevel,
                               new SelectList(Model.PreviousQualificationLevels,
                               "Level",
                               "Name",
                               0))
+        </div>
     </div>
 
     <div>
-        @Html.LabelFor(model => model.ApprentishipCatagories)
-        <div id="apprentship-catagories">
-            @foreach (var catagory in Model.ApprentishipCatagories)
-            {
-                <div class="row">
-                    <div class="col-4">
-                        <p>@catagory.Name</p>
-                    </div>
-                    <div>
-                        <input type="checkbox"
-                               id=@string.Format("catagory-id-{0}", catagory.Id)
-                               placeholder="Please provide any other information that you wish to let our recruiters know…">
-                    </div>
-                </div>
-            }
+
+        <div class="row">
+            <div class="col-6">
+                @Html.LabelFor(x => x.Agriculture);
+            </div>
+            <div class="col-1">
+                @Html.EditorFor(x => x.Agriculture)
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                @Html.LabelFor(x => x.Business);
+            </div>
+            <div class="col-1">
+                @Html.EditorFor(x => x.Business)
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                @Html.LabelFor(x => x.Care);
+            </div>
+            <div class="col-1">
+                @Html.EditorFor(x => x.Care)
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                @Html.LabelFor(x => x.Catering);
+            </div>
+            <div class="col-1">
+                @Html.EditorFor(x => x.Catering)
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                @Html.LabelFor(x => x.Construction);
+            </div>
+            <div class="col-1">
+                @Html.EditorFor(x => x.Construction)
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                @Html.LabelFor(x => x.Creative);
+            </div>
+            <div class="col-1">
+                @Html.EditorFor(x => x.Creative)
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                @Html.LabelFor(x => x.Digital);
+            </div>
+            <div class="col-1">
+                @Html.EditorFor(x => x.Digital)
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                @Html.LabelFor(x => x.Education);
+            </div>
+            <div class="col-1">
+                @Html.EditorFor(x => x.Education)
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                @Html.LabelFor(x => x.Engineering);
+            </div>
+            <div class="col-1">
+                @Html.EditorFor(x => x.Engineering)
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                @Html.LabelFor(x => x.Hair);
+            </div>
+            <div class="col-1">
+                @Html.EditorFor(x => x.Hair)
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                @Html.LabelFor(x => x.Health);
+            </div>
+            <div class="col-1">
+                @Html.EditorFor(x => x.Health)
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                @Html.LabelFor(x => x.Legal);
+            </div>
+            <div class="col-1">
+                @Html.EditorFor(x => x.Legal)
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                @Html.LabelFor(x => x.Protective);
+            </div>
+            <div class="col-1">
+                @Html.EditorFor(x => x.Protective)
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                @Html.LabelFor(x => x.Sales);
+            </div>
+            <div class="col-1">
+                @Html.EditorFor(x => x.Sales)
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                @Html.LabelFor(x => x.Transport);
+            </div>
+            <div class="col-1">
+                @Html.EditorFor(x => x.Transport)
+            </div>
         </div>
     </div>
 
     <div>
         @Html.TextAreaFor(x => x.Comments,
-                          new { cols=100, rows=5})
+                          new { cols = 75, rows = 5 })
     </div>
 
-    <button type="button" class="btn btn-secondary">Submit</button>
+    <div class="alert alert-danger" role="alert" id="error-alert" style="display:none"></div>
+
+    <button type="button" class="btn btn-secondary" onclick="OnSubmitPressed()">Submit</button>
 </div>
+
+@section Scripts{
+    <script type="text/javascript" charset="utf8" src="~/js/ExpressInterest.js"></script>
+}
