@@ -37,7 +37,7 @@ namespace ApprenticeTips.App.Controllers
         {
             var repo = new InterestDataRepo(DbContext);
 
-            var dataModel = new Contact
+            var dataModel = new ContactModel
             {
                 FirstName = vm.FirstName,
                 Surname = vm.Surname,
