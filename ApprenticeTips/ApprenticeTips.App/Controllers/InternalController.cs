@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using ApprenticeTips.App.Models.Internal;
+using ApprenticeTips.Data.DataAccess;
+using ApprenticeTips.Data.Models;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 
 namespace ApprenticeTips.App.Controllers
 {
@@ -48,40 +51,40 @@ namespace ApprenticeTips.App.Controllers
 
             Levels = new List<LevelViewModel>
             {
-                new LevelViewModel{ Id = -1, Name = "Any Level" },
-                new LevelViewModel{ Id = 1, Name = "2" },
-                new LevelViewModel{ Id = 2, Name = "3" },
-                new LevelViewModel{ Id = 3, Name = "4" },
-                new LevelViewModel{ Id = 4, Name = "5" },
-                new LevelViewModel{ Id = 4, Name = "6" },
-                new LevelViewModel{ Id = 4, Name = "7" }
+                new LevelViewModel{ Id = -1, Value = "Any Level" },
+                new LevelViewModel{ Id = 1, Value = "2" },
+                new LevelViewModel{ Id = 2, Value = "3" },
+                new LevelViewModel{ Id = 3, Value = "4" },
+                new LevelViewModel{ Id = 4, Value = "5" },
+                new LevelViewModel{ Id = 4, Value = "6" },
+                new LevelViewModel{ Id = 4, Value = "7" }
             };
 
             Durations = new List<DurationViewModel>
             {
-                new DurationViewModel{ Id = -1, Name = "Any Duration"},
-                new DurationViewModel{ Id = 1, Name = "0"},
-                new DurationViewModel{ Id = 2, Name = "12"},
-                new DurationViewModel{ Id = 3, Name = "13"},
-                new DurationViewModel{ Id = 4, Name = "14"},
-                new DurationViewModel{ Id = 5, Name = "15"},
-                new DurationViewModel{ Id = 6, Name = "16"},
-                new DurationViewModel{ Id = 7, Name = "18"},
-                new DurationViewModel{ Id = 8, Name = "21"},
-                new DurationViewModel{ Id = 9, Name = "22"},
-                new DurationViewModel{ Id = 10, Name = "24"},
-                new DurationViewModel{ Id = 11, Name = "26"},
-                new DurationViewModel{ Id = 12, Name = "27"},
-                new DurationViewModel{ Id = 13, Name = "30"},
-                new DurationViewModel{ Id = 14, Name = "33"},
-                new DurationViewModel{ Id = 15, Name = "34"},
-                new DurationViewModel{ Id = 16, Name = "36"},
-                new DurationViewModel{ Id = 17, Name = "38"},
-                new DurationViewModel{ Id = 18, Name = "42"},
-                new DurationViewModel{ Id = 19, Name = "48"},
-                new DurationViewModel{ Id = 20, Name = "54"},
-                new DurationViewModel{ Id = 21, Name = "60"},
-                new DurationViewModel{ Id = 22, Name = "66"}
+                new DurationViewModel{ Id = -1, Value = "Any Duration"},
+                new DurationViewModel{ Id = 1, Value = "0"},
+                new DurationViewModel{ Id = 2, Value = "12"},
+                new DurationViewModel{ Id = 3, Value = "13"},
+                new DurationViewModel{ Id = 4, Value = "14"},
+                new DurationViewModel{ Id = 5, Value = "15"},
+                new DurationViewModel{ Id = 6, Value = "16"},
+                new DurationViewModel{ Id = 7, Value = "18"},
+                new DurationViewModel{ Id = 8, Value = "21"},
+                new DurationViewModel{ Id = 9, Value = "22"},
+                new DurationViewModel{ Id = 10, Value = "24"},
+                new DurationViewModel{ Id = 11, Value = "26"},
+                new DurationViewModel{ Id = 12, Value = "27"},
+                new DurationViewModel{ Id = 13, Value = "30"},
+                new DurationViewModel{ Id = 14, Value = "33"},
+                new DurationViewModel{ Id = 15, Value = "34"},
+                new DurationViewModel{ Id = 16, Value = "36"},
+                new DurationViewModel{ Id = 17, Value = "38"},
+                new DurationViewModel{ Id = 18, Value = "42"},
+                new DurationViewModel{ Id = 19, Value = "48"},
+                new DurationViewModel{ Id = 20, Value = "54"},
+                new DurationViewModel{ Id = 21, Value = "60"},
+                new DurationViewModel{ Id = 22, Value = "66"}
             };
         }
 
@@ -101,7 +104,25 @@ namespace ApprenticeTips.App.Controllers
         [HttpPost]
         public string GetTableData(SearchViewModel data)
         {
-            return "";
+            var repo = new InternalDataRepo(DbContext);
+
+            var searchParameters = new SearchParamterModel
+            {
+                RouteName = data.RouteId == -1 ? "" : Routes.FirstOrDefault(x => x.Id == data.RouteId).Name,
+                StatusName = data.StatusId == -1 ? "" : Status.FirstOrDefault(x => x.Id == data.StatusId).Name,
+                Level = data.LevelId == -1 ? -1 : Convert.ToInt32(Levels.FirstOrDefault(x => x.Id == data.LevelId).Value),
+                Duration = data.DurationId == -1 ? -1 : Convert.ToInt32(Durations.FirstOrDefault(x => x.Id == data.DurationId).Value)
+            };
+
+            var searchResults = repo.GetSearchModels(searchParameters);
+
+            var rowsJson = JsonConvert.SerializeObject(searchResults, Formatting.None,
+                        new JsonSerializerSettings()
+                        {
+                            ReferenceLoopHandling = ReferenceLoopHandling.Ignore
+                        });
+
+            return rowsJson;
         }
     }
 }

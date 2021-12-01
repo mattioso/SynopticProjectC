@@ -38,7 +38,7 @@
             @Html.DropDownListFor(model => model.LevelId,
                               new SelectList(Model.Levels,
                               "Id",
-                              "Name",
+                              "Value",
                               0))
         </div>
     </div>
@@ -50,7 +50,7 @@
             @Html.DropDownListFor(model => model.DurationId,
                               new SelectList(Model.Durations,
                               "Id",
-                              "Name",
+                              "Value",
                               0))
         </div>
     </div>
