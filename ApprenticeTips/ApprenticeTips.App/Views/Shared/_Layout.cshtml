@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Apprentice Tips</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.css">
+    @RenderSection("Styles", required: false)
+</head>
+<body>
+    <header>
+        <div class="header-small">
+            <div>
+                <div>
+                    <a asp-controller="Interest" asp-action="Index"><img src="~/images/ApprenticeTips_logo.png" class="header-logo" /></a>
+                </div>
+
+                <ul class="nav justify-content-center">
+                    <li class="nav-item">
+                        <a class="nav-link active" asp-controller="Interest" asp-action="Index">Register Interest</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" asp-controller="Internal" asp-action="Index">Internal Search</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <div class="container-fluid">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.js"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

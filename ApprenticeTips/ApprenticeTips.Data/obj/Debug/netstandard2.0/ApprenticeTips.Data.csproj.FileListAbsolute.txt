@@ -1,0 +1,5 @@
+D:\_College\_Project\Code\SynopticProjectC\ApprenticeTips\ApprenticeTips.Data\bin\Debug\netstandard2.0\ApprenticeTips.Data.deps.json
+D:\_College\_Project\Code\SynopticProjectC\ApprenticeTips\ApprenticeTips.Data\bin\Debug\netstandard2.0\ApprenticeTips.Data.dll
+D:\_College\_Project\Code\SynopticProjectC\ApprenticeTips\ApprenticeTips.Data\obj\Debug\netstandard2.0\ApprenticeTips.Data.csprojAssemblyReference.cache
+D:\_College\_Project\Code\SynopticProjectC\ApprenticeTips\ApprenticeTips.Data\obj\Debug\netstandard2.0\ApprenticeTips.Data.AssemblyInfoInputs.cache
+D:\_College\_Project\Code\SynopticProjectC\ApprenticeTips\ApprenticeTips.Data\obj\Debug\netstandard2.0\ApprenticeTips.Data.AssemblyInfo.cs
