@@ -32,6 +32,11 @@ namespace ApprenticeTips.App.Controllers
             return View(vm);
         }
 
+        public IActionResult Thanks()
+        {
+            return View();
+        }
+
         [HttpPost]
         public bool GetInterestData(IndexViewModel vm)
         {

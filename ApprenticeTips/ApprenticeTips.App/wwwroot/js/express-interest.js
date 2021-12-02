@@ -75,7 +75,10 @@ function OnSubmitPressed() {
         $.post("Interest/GetInterestData",
             data,
             function (data, status) {
-                alert("Data: " + data + "\nStatus: " + status);
+                console.log(status)
+                if (status == "success") {
+                    window.location.href = "/Interest/Thanks"
+                }
             });
     }
     else {
