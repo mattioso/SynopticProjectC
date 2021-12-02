@@ -29,12 +29,12 @@ namespace ApprenticeTips.App.Controllers
 
             };
 
-            return View(vm);
+            return View("Index", vm);
         }
 
         public IActionResult Thanks()
         {
-            return View();
+            return View("Thanks");
         }
 
         [HttpPost]
