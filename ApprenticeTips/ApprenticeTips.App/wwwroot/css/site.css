@@ -17,6 +17,14 @@ header {
     height: auto;
     padding-top: 1%;
 }
+.max-width {
+    width: 100%;
+}
+
+.top-padding {
+    padding-top: 0.5%;
+}
+
 
 .hidden {
     display: none;

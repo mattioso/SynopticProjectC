@@ -4,203 +4,268 @@
 }
 
 <div id="data-entry">
-    <h5>Please enter your details and we'll be in touch</h5>
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4 text-center">
+            <h5>Please enter your details and we'll be in touch</h5>
+        </div>
+        <div class="col-4"></div>
+    </div>
 
     <div class="row">
-        <div class="col-4">
+        <div class="col-4"></div>
+        <div class="col">
             @Html.LabelFor(model => model.FirstName)
         </div>
-        <div class="col-6">
-            @Html.EditorFor(model => model.FirstName)
+        <div class="col">
+            @Html.TextBoxFor(model => model.FirstName, new { @class = "max-width" })
         </div>
+        <div class="col-4"></div>
     </div>
 
     <div class="row">
-        <div class="col-4">
+        <div class="col-4"></div>
+        <div class="col">
             @Html.LabelFor(model => model.Surname)
         </div>
-        <div class="col-6">
-            @Html.EditorFor(model => model.Surname)
+        <div class="col">
+            @Html.TextBoxFor(model => model.Surname, new { @class = "max-width" })
         </div>
+        <div class="col-4"></div>
     </div>
 
     <div class="row">
-        <div class="col-4">
+        <div class="col-4"></div>
+        <div class="col">
             @Html.LabelFor(model => model.Email)
         </div>
-        <div class="col-6">
-            @Html.EditorFor(model => model.Email)
+        <div class="col">
+            @Html.TextBoxFor(model => model.Email, new { @class = "max-width" })
         </div>
+        <div class="col-4"></div>
     </div>
 
     <div class="row">
-        <div class="col-4">
+        <div class="col-4"></div>
+        <div class="col">
             @Html.LabelFor(model => model.PhoneNumber)
         </div>
-        <div class="col-6">
-            @Html.EditorFor(model => model.PhoneNumber, new { @type = "number" })
+        <div class="col">
+            @Html.TextBoxFor(model => model.PhoneNumber, new { @class = "max-width" })
         </div>
+        <div class="col-4"></div>
     </div>
 
     <div class="row">
-        <div class="col-4">
+        <div class="col-4"></div>
+        <div class="col">
             @Html.LabelFor(model => model.PreviousQualificationLevels)
         </div>
-        <div class="col-6">
+        <div class="col">
             @Html.DropDownListFor(model => model.PreviousQualificationsLevel,
                               new SelectList(Model.PreviousQualificationLevels,
                               "Level",
                               "Name",
-                              0))
+                              0),
+                              new { @class = "max-width" })
         </div>
+        <div class="col-4"></div>
     </div>
 
     <div>
 
         <div class="row">
-            <div class="col-6">
-                @Html.LabelFor(x => x.Agriculture);
+            <div class="col-4"></div>
+            <div class="col-3">
+                @Html.LabelFor(x => x.Agriculture)
             </div>
-            <div class="col-1">
-                @Html.EditorFor(x => x.Agriculture)
+            <div class="col text-right">
+                @Html.CheckBoxFor(x => x.Agriculture)
             </div>
+            <div class="col-4"></div>
         </div>
 
         <div class="row">
-            <div class="col-6">
-                @Html.LabelFor(x => x.Business);
+            <div class="col-4"></div>
+            <div class="col-3">
+                @Html.LabelFor(x => x.Business)
             </div>
-            <div class="col-1">
-                @Html.EditorFor(x => x.Business)
+            <div class="col text-right">
+                @Html.CheckBoxFor(x => x.Business)
             </div>
+            <div class="col-4"></div>
         </div>
 
         <div class="row">
-            <div class="col-6">
-                @Html.LabelFor(x => x.Care);
+            <div class="col-4"></div>
+            <div class="col-3">
+                @Html.LabelFor(x => x.Care)
             </div>
-            <div class="col-1">
-                @Html.EditorFor(x => x.Care)
+            <div class="col text-right">
+                @Html.CheckBoxFor(x => x.Care)
             </div>
+            <div class="col-4"></div>
         </div>
 
         <div class="row">
-            <div class="col-6">
-                @Html.LabelFor(x => x.Catering);
+            <div class="col-4"></div>
+            <div class="col-3">
+                @Html.LabelFor(x => x.Catering)
             </div>
-            <div class="col-1">
-                @Html.EditorFor(x => x.Catering)
+            <div class="col text-right">
+                @Html.CheckBoxFor(x => x.Catering)
             </div>
+            <div class="col-4"></div>
         </div>
 
         <div class="row">
-            <div class="col-6">
-                @Html.LabelFor(x => x.Construction);
+            <div class="col-4"></div>
+            <div class="col-3">
+                @Html.LabelFor(x => x.Construction)
             </div>
-            <div class="col-1">
-                @Html.EditorFor(x => x.Construction)
+            <div class="col text-right">
+                @Html.CheckBoxFor(x => x.Construction)
             </div>
+            <div class="col-4"></div>
         </div>
 
         <div class="row">
-            <div class="col-6">
-                @Html.LabelFor(x => x.Creative);
+            <div class="col-4"></div>
+            <div class="col-3">
+                @Html.LabelFor(x => x.Creative)
             </div>
-            <div class="col-1">
-                @Html.EditorFor(x => x.Creative)
+            <div class="col text-right">
+                @Html.CheckBoxFor(x => x.Creative)
             </div>
+            <div class="col-4"></div>
         </div>
 
         <div class="row">
-            <div class="col-6">
-                @Html.LabelFor(x => x.Digital);
+            <div class="col-4"></div>
+            <div class="col-3">
+                @Html.LabelFor(x => x.Digital)
             </div>
-            <div class="col-1">
-                @Html.EditorFor(x => x.Digital)
+            <div class="col text-right">
+                @Html.CheckBoxFor(x => x.Digital)
             </div>
+            <div class="col-4"></div>
         </div>
 
         <div class="row">
-            <div class="col-6">
-                @Html.LabelFor(x => x.Education);
+            <div class="col-4"></div>
+            <div class="col-3">
+                @Html.LabelFor(x => x.Education)
             </div>
-            <div class="col-1">
-                @Html.EditorFor(x => x.Education)
+            <div class="col text-right">
+                @Html.CheckBoxFor(x => x.Education)
             </div>
+            <div class="col-4"></div>
         </div>
 
         <div class="row">
-            <div class="col-6">
-                @Html.LabelFor(x => x.Engineering);
+            <div class="col-4"></div>
+            <div class="col-3">
+                @Html.LabelFor(x => x.Engineering)
             </div>
-            <div class="col-1">
-                @Html.EditorFor(x => x.Engineering)
+            <div class="col text-right">
+                @Html.CheckBoxFor(x => x.Engineering)
             </div>
+            <div class="col-4"></div>
         </div>
 
         <div class="row">
-            <div class="col-6">
-                @Html.LabelFor(x => x.Hair);
+            <div class="col-4"></div>
+            <div class="col-3">
+                @Html.LabelFor(x => x.Hair)
             </div>
-            <div class="col-1">
-                @Html.EditorFor(x => x.Hair)
+            <div class="col text-right">
+                @Html.CheckBoxFor(x => x.Hair)
             </div>
+            <div class="col-4"></div>
         </div>
 
         <div class="row">
-            <div class="col-6">
-                @Html.LabelFor(x => x.Health);
+            <div class="col-4"></div>
+            <div class="col-3">
+                @Html.LabelFor(x => x.Health)
             </div>
-            <div class="col-1">
-                @Html.EditorFor(x => x.Health)
+            <div class="col text-right">
+                @Html.CheckBoxFor(x => x.Health)
             </div>
+            <div class="col-4"></div>
         </div>
 
         <div class="row">
-            <div class="col-6">
-                @Html.LabelFor(x => x.Legal);
+            <div class="col-4"></div>
+            <div class="col-3">
+                @Html.LabelFor(x => x.Legal)
             </div>
-            <div class="col-1">
-                @Html.EditorFor(x => x.Legal)
+            <div class="col text-right">
+                @Html.CheckBoxFor(x => x.Legal)
             </div>
+            <div class="col-4"></div>
         </div>
 
         <div class="row">
-            <div class="col-6">
-                @Html.LabelFor(x => x.Protective);
+            <div class="col-4"></div>
+            <div class="col-3">
+                @Html.LabelFor(x => x.Protective)
             </div>
-            <div class="col-1">
-                @Html.EditorFor(x => x.Protective)
+            <div class="col text-right">
+                @Html.CheckBoxFor(x => x.Protective)
             </div>
+            <div class="col-4"></div>
         </div>
 
         <div class="row">
-            <div class="col-6">
-                @Html.LabelFor(x => x.Sales);
+            <div class="col-4"></div>
+            <div class="col-3">
+                @Html.LabelFor(x => x.Sales)
             </div>
-            <div class="col-1">
-                @Html.EditorFor(x => x.Sales)
+            <div class="col text-right">
+                @Html.CheckBoxFor(x => x.Sales)
             </div>
+            <div class="col-4"></div>
         </div>
 
         <div class="row">
-            <div class="col-6">
-                @Html.LabelFor(x => x.Transport);
+            <div class="col-4"></div>
+            <div class="col-3">
+                @Html.LabelFor(x => x.Transport)
             </div>
-            <div class="col-1">
-                @Html.EditorFor(x => x.Transport)
+            <div class="col text-right">
+                @Html.CheckBoxFor(x => x.Transport)
             </div>
+            <div class="col-4"></div>
         </div>
     </div>
 
-    <div>
-        @Html.TextAreaFor(x => x.Comments,
-                          new { cols = 75, rows = 5 })
+    <div class="row">
+        <div class="col"></div>
+        <div class="col">
+            @Html.TextAreaFor(x => x.Comments,
+                                   new { @class = "max-width",
+                                         @rows = 4,
+                                         @placeholder= "Please provide any other information that you wish to let our recruiters know…"})
+        </div>
+        <div class="col"></div>
     </div>
 
-    <div class="alert alert-danger" role="alert" id="error-alert" style="display:none"></div>
+    <div class="row">
+        <div class="col"></div>
+        <div class="col top-padding">
+            <div class="alert alert-danger hidden" role="alert" id="error-alert"></div>
+        </div>
+        <div class="col"></div>
+    </div>
 
-    <button type="button" class="btn btn-primary" onclick="OnSubmitPressed()">Submit</button>
+    <div class="row">
+        <div class="col"></div>
+        <div class="col top-padding">
+            <button type="button" class="btn btn-primary" onclick="OnSubmitPressed()">Submit</button>
+        </div>
+        <div class="col"></div>
+    </div>
 </div>
 
 @section Scripts{
