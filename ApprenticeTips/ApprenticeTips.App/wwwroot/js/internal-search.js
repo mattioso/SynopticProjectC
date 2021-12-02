@@ -19,7 +19,7 @@ function CreateTable() {
                 {
                     "data": "Link",
                     "render": function (data, type) {
-                        return `<a href="${data}">${data}</a>`
+                        return `<a href="${data}" target="_blank">${data}</a>`
                     }
                 }
             ]
