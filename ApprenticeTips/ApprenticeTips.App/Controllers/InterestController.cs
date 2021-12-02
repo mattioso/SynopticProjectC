@@ -38,7 +38,7 @@ namespace ApprenticeTips.App.Controllers
         }
 
         [HttpPost]
-        public bool GetInterestData(IndexViewModel vm)
+        public string GetInterestData(IndexViewModel vm)
         {
             var repo = new InterestDataRepo(DbContext);
 
@@ -70,7 +70,7 @@ namespace ApprenticeTips.App.Controllers
 
             repo.RegisterInterest(dataModel);
 
-            return true;
+            return "";
         }
     }
 }
