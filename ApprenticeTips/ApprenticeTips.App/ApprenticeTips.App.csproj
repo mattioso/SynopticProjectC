@@ -13,4 +13,8 @@
     <ProjectReference Include="..\ApprenticeTips.Data\ApprenticeTips.Data.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\images\" />
+  </ItemGroup>
+
 </Project>

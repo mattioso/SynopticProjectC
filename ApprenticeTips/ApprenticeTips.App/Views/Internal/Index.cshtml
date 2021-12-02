@@ -3,72 +3,118 @@
     ViewData["Title"] = "Internal Search";
 }
 
-<h4>Please fill in the fields bellow to search for apprentiships</h4>
+<div class="row">
+    <div class="col-4"></div>
+    <div class="col-4 text-center">
+        <h5>Please fill in the fields bellow to search for apprentiships</h5>
+    </div>
+    <div class="col-4"></div>
+</div>
 
 <div>
     <div class="row">
-        <div class="col-3">
+        <div class="col-4"></div>
+        <div class="col">
             @Html.LabelFor(model => model.Routes)
         </div>
-        <div class="col-6">
+        <div class="col">
             @Html.DropDownListFor(model => model.RouteId,
                               new SelectList(Model.Routes,
                               "Id",
                               "Name",
-                              0))
+                              0),
+                              new { @class = "max-width" })
         </div>
+        <div class="col-4"></div>
     </div>
+
     <div class="row">
-        <div class="col-3">
+        <div class="col-4"></div>
+        <div class="col">
             @Html.LabelFor(model => model.Status)
         </div>
-        <div class="col-6">
+        <div class="col">
             @Html.DropDownListFor(model => model.StatusId,
                               new SelectList(Model.Status,
                               "Id",
                               "Name",
-                              0))
+                              0),
+                              new { @class = "max-width" })
         </div>
+        <div class="col-4"></div>
     </div>
+
     <div class="row">
-        <div class="col-3">
+        <div class="col-4"></div>
+        <div class="col">
             @Html.LabelFor(model => model.Levels)
         </div>
-        <div class="col-6">
+        <div class="col">
             @Html.DropDownListFor(model => model.LevelId,
                               new SelectList(Model.Levels,
                               "Id",
                               "Value",
-                              0))
+                              0),
+                              new { @class = "max-width" })
         </div>
+        <div class="col-4"></div>
     </div>
+
     <div class="row">
-        <div class="col-3">
+        <div class="col-4"></div>
+        <div class="col">
             @Html.LabelFor(model => model.Durations)
         </div>
-        <div class="col-6">
+        <div class="col">
             @Html.DropDownListFor(model => model.DurationId,
                               new SelectList(Model.Durations,
                               "Id",
                               "Value",
-                              0))
+                              0),
+                              new { @class = "max-width" })
         </div>
+        <div class="col-4"></div>
     </div>
 
-    <button type="button" class="btn btn-secondary" onclick="Search()">Search</button>
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4">
+            <button type="button" class="btn btn-primary" onclick="Search()">Search</button>
+        </div>
+        <div class="col-4"></div>
+    </div>
 
-    <h4>Results</h4>
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4 top-padding">
+            <h5 id="results" class="hidden">Results</h5>
+        </div>
+        <div class="col-4"></div>
+    </div>
 
-    <div class="alert alert-danger" role="alert" id="error-alert" style="display:none"></div>
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4 top-padding">
+            <div class="alert alert-danger hidden" role="alert" id="error-alert"></div>
+        </div>
+        <div class="col-4"></div>
+    </div>
 
-    <div id="table-div">
-        <table id="search-table">
-            <thead></thead>
-            <thead></thead>
-        </table>
+    <div class="row">
+        <div class="col"></div>
+        <div class="col-8">
+            <div id="table-div" class="max-width">
+                <table class="text-center" id="search-table"></table>
+            </div>
+        </div>
+        <div class="col"></div>
     </div>
 </div>
 
 @section Scripts{
-    <script type="text/javascript" charset="utf8" src="~/js/InternalSearch.js"></script>
+    <script type="text/javascript" charset="utf8" src="~/js/internal-search.js"></script>
+}
+
+@section Styles{
+    <link rel="stylesheet" href="~/css/internal-search.css" />
 }
