@@ -52,12 +52,33 @@ function OnSubmitPressed() {
         dataValid = false;
         $("#error-alert").append("<p>Please enter a valid Phone Number</p>")
     }
+
+    if ([data.Agriculture,
+        data.Business,
+        data.Care,
+        data.Catering,
+        data.Construction,
+        data.Creative,
+        data.Digital,
+        data.Education,
+        data.Engineering,
+        data.Hair, data.Health,
+        data.Legal,
+        data.Protective,
+        data.Sales,
+        data.Transport].every(v => v === false)) {
+        dataValid = false;
+        $("#error-alert").append("<p>Please select at least one pathway</p>")
+    }
     
     if (dataValid) {
         $.post("Interest/GetInterestData",
             data,
             function (data, status) {
-                alert("Data: " + data + "\nStatus: " + status);
+                console.log(status)
+                if (status == "success") {
+                    window.location.href = "/Interest/Thanks"
+                }
             });
     }
     else {

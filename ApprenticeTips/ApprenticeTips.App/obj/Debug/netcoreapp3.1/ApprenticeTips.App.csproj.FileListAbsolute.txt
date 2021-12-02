@@ -235,3 +235,4 @@ D:\_College\_Project\Code\SynopticProjectC\SynopticProjectC\ApprenticeTips\Appre
 D:\_College\_Project\Code\SynopticProjectC\SynopticProjectC\ApprenticeTips\ApprenticeTips.App\obj\Debug\netcoreapp3.1\ApprenticeTips.App.dll
 D:\_College\_Project\Code\SynopticProjectC\SynopticProjectC\ApprenticeTips\ApprenticeTips.App\obj\Debug\netcoreapp3.1\ApprenticeTips.App.pdb
 D:\_College\_Project\Code\SynopticProjectC\SynopticProjectC\ApprenticeTips\ApprenticeTips.App\obj\Debug\netcoreapp3.1\ApprenticeTips.App.genruntimeconfig.cache
+D:\_College\_Project\Code\SynopticProjectC\SynopticProjectC\ApprenticeTips\ApprenticeTips.App\obj\Debug\netcoreapp3.1\Razor\Views\Interest\Thanks.cshtml.g.cs

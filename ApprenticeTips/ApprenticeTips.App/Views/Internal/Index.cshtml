@@ -4,16 +4,16 @@
 }
 
 <div class="row">
-    <div class="col"></div>
+    <div class="col-lg-3"></div>
     <div class="col text-center">
         <h5>Please fill in the fields bellow to search for apprentiships</h5>
     </div>
-    <div class="col"></div>
+    <div class="col-lg-3"></div>
 </div>
 
 <div>
     <div class="row">
-        <div class="col-4"></div>
+        <div class="col-lg-3 col-md-2"></div>
         <div class="col">
             @Html.LabelFor(model => model.Routes)
         </div>
@@ -25,11 +25,11 @@
                               0),
                               new { @class = "max-width" })
         </div>
-        <div class="col-4"></div>
+        <div class="col-lg-3 col-md-2"></div>
     </div>
 
     <div class="row">
-        <div class="col-4"></div>
+        <div class="col-lg-3 col-md-2"></div>
         <div class="col">
             @Html.LabelFor(model => model.Status)
         </div>
@@ -41,11 +41,11 @@
                               0),
                               new { @class = "max-width" })
         </div>
-        <div class="col-4"></div>
+        <div class="col-lg-3 col-md-2"></div>
     </div>
 
     <div class="row">
-        <div class="col-4"></div>
+        <div class="col-lg-3 col-md-2"></div>
         <div class="col">
             @Html.LabelFor(model => model.Levels)
         </div>
@@ -57,11 +57,11 @@
                               0),
                               new { @class = "max-width" })
         </div>
-        <div class="col-4"></div>
+        <div class="col-lg-3 col-md-2"></div>
     </div>
 
     <div class="row">
-        <div class="col-4"></div>
+        <div class="col-lg-3 col-md-2"></div>
         <div class="col">
             @Html.LabelFor(model => model.Durations)
         </div>
@@ -73,41 +73,41 @@
                               0),
                               new { @class = "max-width" })
         </div>
-        <div class="col-4"></div>
+        <div class="col-lg-3 col-md-2"></div>
     </div>
 
     <div class="row">
-        <div class="col"></div>
+        <div class="col-lg-3 col-md-2"></div>
         <div class="col">
             <button type="button" class="btn btn-primary" onclick="Search()">Search</button>
         </div>
-        <div class="col"></div>
+        <div class="col-lg-3 col-md-2"></div>
     </div>
 
     <div class="row">
-        <div class="col-4"></div>
-        <div class="col-4 top-padding">
+        <div class="col-lg-3 col-md-2"></div>
+        <div class="col top-padding">
             <h5 id="results" class="hidden">Results</h5>
         </div>
-        <div class="col-4"></div>
+        <div class="col-lg-3 col-md-2"></div>
     </div>
 
     <div class="row">
-        <div class="col-4"></div>
-        <div class="col-4 top-padding">
+        <div class="col-lg-3 col-md-2"></div>
+        <div class="col top-padding">
             <div class="alert alert-danger hidden" role="alert" id="error-alert"></div>
         </div>
-        <div class="col-4"></div>
+        <div class="col-lg-3 col-md-2"></div>
     </div>
 
     <div class="row">
-        <div class="col"></div>
-        <div class="col-8">
+        <div class="col-lg-3 col-md-2"></div>
+        <div class="col-6">
             <div id="table-div" class="max-width">
                 <table class="text-center" id="search-table"></table>
             </div>
         </div>
-        <div class="col"></div>
+        <div class="col-lg-3 col-md-2"></div>
     </div>
 </div>
 

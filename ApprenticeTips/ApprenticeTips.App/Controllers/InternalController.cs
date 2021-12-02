@@ -98,7 +98,7 @@ namespace ApprenticeTips.App.Controllers
                 Durations = Durations
             };
 
-            return View(vm);
+            return View("Index", vm);
         }
         
         [HttpPost]

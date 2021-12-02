@@ -29,11 +29,16 @@ namespace ApprenticeTips.App.Controllers
 
             };
 
-            return View(vm);
+            return View("Index", vm);
+        }
+
+        public IActionResult Thanks()
+        {
+            return View("Thanks");
         }
 
         [HttpPost]
-        public bool GetInterestData(IndexViewModel vm)
+        public string GetInterestData(IndexViewModel vm)
         {
             var repo = new InterestDataRepo(DbContext);
 
@@ -65,7 +70,7 @@ namespace ApprenticeTips.App.Controllers
 
             repo.RegisterInterest(dataModel);
 
-            return true;
+            return "";
         }
     }
 }
