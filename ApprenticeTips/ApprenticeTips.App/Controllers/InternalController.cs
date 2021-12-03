@@ -116,7 +116,18 @@ namespace ApprenticeTips.App.Controllers
 
             var searchResults = repo.GetSearchModels(searchParameters);
 
-            var rowsJson = JsonConvert.SerializeObject(searchResults, Formatting.None,
+            var returnModel = new InternalSearchReturnViewModel()
+            {
+                Success = searchResults.Count != 0,
+                Error = searchResults.Count == 0 ? "There was an issue connecting to the database, please try again later" : "",
+                TableRows = searchResults.ConvertAll(x => new TableRowViewModel 
+                { 
+                    Name = x.Name,
+                    Link = x.Link
+                })
+            };
+
+            var rowsJson = JsonConvert.SerializeObject(returnModel, Formatting.None,
                         new JsonSerializerSettings()
                         {
                             ReferenceLoopHandling = ReferenceLoopHandling.Ignore

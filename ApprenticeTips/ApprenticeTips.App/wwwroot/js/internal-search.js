@@ -12,7 +12,7 @@ function CreateTable() {
         $('#table-div').append('<table id="search-table"></table>')
 
         $('#search-table').DataTable({
-            "data": JSON.parse(data),
+            "data": data,
             "iDisplayLength": 50,
             "columns": [
                 { "data": "Name" },
@@ -35,6 +35,7 @@ function Search() {
         "DurationId": document.getElementById("DurationId").value
     }
     $("#error-alert").hide();
+    $("#results").hide();
     $("#error-alert").empty();
 
     showTable = true;
@@ -44,12 +45,28 @@ function Search() {
         $("#error-alert").show();
     }
     else {
-        $("#results").show();
         $.post("Internal/GetTableData",
             input_data,
             function (server_data, status) {
-                data = server_data;
-                CreateTable();
+                if (status == "success") {
+                    server_data = JSON.parse(server_data)
+                    if (server_data.Success) {
+                        $("#results").show();
+                        data = server_data.TableRows;
+                        showTable = true;
+                        CreateTable();
+                    }
+                    else {
+                        $("#error-alert").empty();
+                        $("#error-alert").append(`<p>${server_data.Error}</p>`)
+                        $("#error-alert").show();
+                    }
+                }
+                else {
+                    $("#error-alert").empty();
+                    $("#error-alert").append(`<p>There was an issue connecting to the server, please try again later</p>`)
+                    $("#error-alert").show();
+                }
             });
     }
 

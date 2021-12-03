@@ -38,9 +38,10 @@ namespace ApprenticeTips.App.Controllers
         }
 
         [HttpPost]
-        public string GetInterestData(IndexViewModel vm)
+        public InterestReturnViewModel GetInterestData(IndexViewModel vm)
         {
             var repo = new InterestDataRepo(DbContext);
+            var returnVm = new InterestReturnViewModel();
 
             var dataModel = new ContactModel
             {
@@ -68,9 +69,23 @@ namespace ApprenticeTips.App.Controllers
                 SubmitDate = DateTime.Now
             };
 
-            repo.RegisterInterest(dataModel);
-
-            return "";
+            var suceeded = repo.RegisterInterest(dataModel);
+            if(suceeded)
+            {
+                return new InterestReturnViewModel
+                {
+                    Success = true,
+                    Error = ""
+                };
+            }
+            else
+            {
+                return new InterestReturnViewModel
+                {
+                    Success = false,
+                    Error = "There was an issue connecting to the database, please try again later"
+                };
+            }
         }
     }
 }

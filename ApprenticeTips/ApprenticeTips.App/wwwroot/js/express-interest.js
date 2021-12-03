@@ -75,9 +75,18 @@ function OnSubmitPressed() {
         $.post("Interest/GetInterestData",
             data,
             function (data, status) {
-                console.log(status)
-                if (status == "success") {
-                    window.location.href = "/Interest/Thanks"
+                if (status == "success" && data.success) {
+                    window.location.href = "/Interest/Thanks";
+                }
+                else if (status != "success") {
+                    $("#error-alert").empty();
+                    $("#error-alert").append("<p>There has been an issue connecting to the server, please try again later</p>")
+                    $("#error-alert").show();
+                }
+                else {
+                    $("#error-alert").empty();
+                    $("#error-alert").append(`<p>${data.error}</p>`)
+                    $("#error-alert").show();
                 }
             });
     }
