@@ -75,18 +75,25 @@ namespace ApprenticeTips.Data.DataAccess
                     cmd.Parameters.AddWithValue("duration", searchParamters.Duration);
                 }
 
-                con.Open();
-
-                using (var dr = cmd.ExecuteReader())
+                try
                 {
-                    while (dr.Read())
+                    con.Open();
+
+                    using (var dr = cmd.ExecuteReader())
                     {
-                        models.Add(new SearchModel
+                        while (dr.Read())
                         {
-                            Name = Convert.ToString(dr["name"]),
-                            Link = Convert.ToString(dr["link"])
-                        });
+                            models.Add(new SearchModel
+                            {
+                                Name = Convert.ToString(dr["name"]),
+                                Link = Convert.ToString(dr["link"])
+                            });
+                        }
                     }
+                }
+                catch
+                {
+
                 }
             }
 
