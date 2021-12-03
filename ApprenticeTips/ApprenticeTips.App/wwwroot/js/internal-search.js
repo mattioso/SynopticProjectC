@@ -3,12 +3,12 @@ var data = null
 var showTable = false;
 
 $(window).resize(function () {
+    $("#table-div").empty()
     CreateTable();
 });
 
 function CreateTable() {
     if (showTable) {
-        $("#table-div").empty()
         $('#table-div').append('<table id="search-table"></table>')
 
         $('#search-table').DataTable({
@@ -36,7 +36,9 @@ function Search() {
     }
     $("#error-alert").hide();
     $("#results").hide();
+
     $("#error-alert").empty();
+    $("#table-div").empty()
 
     showTable = true;
 
