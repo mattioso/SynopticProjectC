@@ -119,7 +119,7 @@ namespace ApprenticeTips.App.Controllers
             var returnModel = new InternalSearchReturnViewModel()
             {
                 Success = searchResults.Count != 0,
-                Error = searchResults.Count == 0 ? "There was an issue connecting to the database, please try again later" : "",
+                Error = searchResults.Count == 0 ? "No Results found" : "",
                 TableRows = searchResults.ConvertAll(x => new TableRowViewModel 
                 { 
                     Name = x.Name,
