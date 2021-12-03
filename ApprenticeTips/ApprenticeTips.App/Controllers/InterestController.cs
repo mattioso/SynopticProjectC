@@ -41,7 +41,6 @@ namespace ApprenticeTips.App.Controllers
         public InterestReturnViewModel GetInterestData(IndexViewModel vm)
         {
             var repo = new InterestDataRepo(DbContext);
-            var returnVm = new InterestReturnViewModel();
 
             var dataModel = new ContactModel
             {
